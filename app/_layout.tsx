@@ -1,5 +1,29 @@
 import { Stack } from "expo-router";
+import '../global.css'
+import { useEffect } from "react";
+import { useFonts } from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
 
 export default function RootLayout() {
-  return <Stack />;
+
+  const [fontsLoaded] = useFonts({
+    "Exo": require("../assets/fonts/Exo/Exo-VariableFont_wght.ttf"),
+    "ExoItalic": require("../assets/fonts/Exo/Exo-Italic-VariableFont_wght.ttf"),
+    "ExoBold": require("../assets/fonts/Exo/static/Exo-Bold.ttf"),
+    "Philosopher": require("../assets/fonts/Philosopher/Philosopher-Regular.ttf"),
+    "PhilosopherBold": require("../assets/fonts/Philosopher/Philosopher-Bold.ttf"),
+    "BerkshireSwash": require("../assets/fonts/Berkshire_Swash/BerkshireSwash-Regular.ttf"),
+  });
+
+  useEffect(() => {
+    if (fontsLoaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
+  return <Stack screenOptions={{headerShown: false}} />;
 }

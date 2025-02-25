@@ -32,6 +32,19 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Exo/Exo-VariableFont_wght.ttf",
+            "./assets/fonts/Exo/Exo-Italic-VariableFont_wght.ttf",
+            "./assets/fonts/Exo/static/Exo-Bold.ttf",
+            "./assets/fonts/Philosopher/Philosopher-Regular.ttf",
+            "./assets/fonts/Philosopher/Philosopher-Bold.ttf",
+            "./assets/fonts/Berkshire_Swash/BerkshireSwash-Regular.ttf"
+          ]
+        }
       ]
     ],
     "experiments": {
