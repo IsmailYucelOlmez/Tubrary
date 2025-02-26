@@ -2,15 +2,21 @@ import { View, Text, ScrollView, TouchableOpacity, Image, Alert } from 'react-na
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { login } from '@/lib/appwrite'
+import { useGlobalContext } from '@/lib/provider'
+import { Redirect } from 'expo-router'
 
 const SıgnIn = () => {
+
+  const {refetch,isLoading,isLogged}=useGlobalContext()
+
+  if(!isLoading && isLogged) return <Redirect to="/"/>
 
   const handleLogin =async () => {
 
     const result=await login()
 
     if(result){
-      console.log("Login Success")
+      refetch()
     }else{
       Alert.alert("Login Failed")
     }
