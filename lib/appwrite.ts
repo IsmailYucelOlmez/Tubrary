@@ -23,17 +23,17 @@ export const login=async()=>{
 
         const response = await account.createOAuth2Token( OAuthProvider.Google, redirectUri);
         
-        if (!response) throw new Error("Create OAuth2 token failed");
+        if (!response) throw new Error("Create OAuth2 token failed (Response)");
 
         const browserResult = await openAuthSessionAsync(response.toString(), redirectUri);
     
-        if (browserResult.type !== "success") throw new Error("Create OAuth2 token failed");
+        if (browserResult.type !== "success") throw new Error("Create OAuth2 token failed (Browser Result)");
 
         const url = new URL(browserResult.url);
         const secret = url.searchParams.get("secret")?.toString();
         const userId = url.searchParams.get("userId")?.toString();
         
-        if (!secret || !userId) throw new Error("Create OAuth2 token failed");
+        if (!secret || !userId) throw new Error("Create OAuth2 token failed (Secret or User ID)");
 
         const session = await account.createSession(userId, secret);
         

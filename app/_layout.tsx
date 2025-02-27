@@ -4,6 +4,10 @@ import { useEffect } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import GlobalProvider from "@/lib/provider";
+import { Client } from "react-native-appwrite";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient= new QueryClient();
 
 export default function RootLayout() {
 
@@ -26,9 +30,14 @@ export default function RootLayout() {
     return null;
   }
 
+ 
+
   return (
-  <GlobalProvider>
-    <Stack screenOptions={{headerShown: false}} />;
-  </GlobalProvider>
+
+    <QueryClientProvider client={queryClient}>
+      <GlobalProvider>
+        <Stack screenOptions={{headerShown: false}} />;
+      </GlobalProvider>
+    </QueryClientProvider>
   )
 }

@@ -5,11 +5,11 @@ import { login } from '@/lib/appwrite'
 import { useGlobalContext } from '@/lib/provider'
 import { Redirect } from 'expo-router'
 
-const SıgnIn = () => {
+const SignIn = () => {
 
   const {refetch,isLoading,isLogged}=useGlobalContext()
 
-  if(!isLoading && isLogged) return <Redirect to="/"/>
+  if(!isLoading && isLogged) return <Redirect href="/" />
 
   const handleLogin =async () => {
 
@@ -24,16 +24,8 @@ const SıgnIn = () => {
 
   return (
     <SafeAreaView className="bg-white h-full">
-      <ScrollView
-        contentContainerStyle={{
-          height: "100%",
-        }}
-      >
-        <Image
-          //source={images.onboarding}
-          //className="w-full h-4/6"
-          //resizeMode="contain"
-        />
+      <ScrollView contentContainerStyle={{ height: "100%", }} >
+        
 
         <View className="px-10">
           <Text className="text-base text-center uppercase font-rubik text-black-200">
@@ -54,11 +46,7 @@ const SıgnIn = () => {
             className="bg-white shadow-md shadow-zinc-300 rounded-full w-full py-4 mt-5"
           >
             <View className="flex flex-row items-center justify-center">
-              <Image
-                //source={icons.google}
-                //className="w-5 h-5"
-                //resizeMode="contain"
-              />
+              
               <Text className="text-lg font-rubik-medium text-black-300 ml-2">
                 Continue with Google
               </Text>
@@ -70,4 +58,4 @@ const SıgnIn = () => {
   )
 }
 
-export default SıgnIn
+export default SignIn
