@@ -1,27 +1,29 @@
 import { Tabs } from "expo-router";
-import { MaterialIcons } from "@expo/vector-icons";
+import {House, Search, SquareLibrary, User} from "lucide-react-native"
 
 export default function TabLayout() {
     return (
         <Tabs
             screenOptions={{
-                tabBarActiveTintColor: "#007AFF",
-                tabBarInactiveTintColor: "#8E8E93",
+                tabBarActiveTintColor: "#2B2D42",
                 tabBarShowLabel:false,
                 headerShown: false,
                 tabBarStyle: {
-                    backgroundColor: "#FFFFFF",
-                    borderTopWidth: 1,
-                    borderTopColor: "#E5E5EA",
+                    backgroundColor: "#fff",
+                    borderRadius: 20,
+                    borderTopColor: "#2B2D42",
+                    borderTopWidth: 2,
+
                 },
-            }}
-        >
+                
+            }} >
+
             <Tabs.Screen
                 name="index"
                 options={{
                     title: "Home",
                     tabBarIcon: ({focused, color, size }) => (
-                        <MaterialIcons name="home" size={size} color={color} />
+                        <House size={32} color={'#2B2D42'} strokeWidth={focused ? 2.5:1.5} />
                     ),
                 }}
             />
@@ -30,7 +32,7 @@ export default function TabLayout() {
                 options={{
                     title: "Search",
                     tabBarIcon: ({focused, color, size }) => (
-                        <MaterialIcons name="search" size={size} color={color} />
+                        <Search  size={32} stroke={'#2B2D42'} strokeWidth={focused ? 2.5:1.5}/>
                     ),
                 }}
             />
@@ -39,7 +41,7 @@ export default function TabLayout() {
                 options={{
                     title: "Library",
                     tabBarIcon: ({focused, color, size }) => (
-                        <MaterialIcons name="local-library" size={size} color={color} />
+                        <SquareLibrary size={32} color={'#2B2D42'} strokeWidth={focused ?  2.5:1.5} />
                     ),
                 }}
             />
@@ -48,7 +50,7 @@ export default function TabLayout() {
                 options={{
                     title: "Profile",
                     tabBarIcon: ({focused, color, size }) => (
-                        <MaterialIcons name="person" size={size} color={color} />
+                        <User size={32} stroke={'#2B2D42'} strokeWidth={focused ? 2.5:1.5}/>
                     ),
                 }}
             />

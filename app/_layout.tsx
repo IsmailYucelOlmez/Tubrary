@@ -1,10 +1,9 @@
 import { Stack } from "expo-router";
-import '../global.css'
+import './global.css'
 import { useEffect } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import GlobalProvider from "@/lib/provider";
-import { Client } from "react-native-appwrite";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 const queryClient= new QueryClient();
@@ -22,21 +21,20 @@ export default function RootLayout() {
 
   useEffect(() => {
     if (fontsLoaded) {
-      SplashScreen.hideAsync();
+      SplashScreen.hideAsync()
     }
   }, [fontsLoaded]);
 
   if (!fontsLoaded) {
     return null;
   }
-
  
 
   return (
 
     <QueryClientProvider client={queryClient}>
       <GlobalProvider>
-        <Stack screenOptions={{headerShown: false}} />;
+        <Stack screenOptions={{headerShown: false}} />
       </GlobalProvider>
     </QueryClientProvider>
   )
