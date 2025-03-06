@@ -26,7 +26,6 @@ const SignIn = () => {
     <SafeAreaView className="bg-white h-full">
       <ScrollView contentContainerStyle={{ height: "100%", }} >
         
-
         <View className="px-10">
           <Text className="text-base text-center uppercase font-rubik text-black-200">
             Welcome To Real Scout
