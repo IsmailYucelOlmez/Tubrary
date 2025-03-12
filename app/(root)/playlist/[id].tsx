@@ -2,7 +2,7 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { useLocalSearchParams } from 'expo-router'
 
-const Property = () => {
+const PlayList = () => {
 
     const { id } = useLocalSearchParams()
 
@@ -13,4 +13,4 @@ const Property = () => {
   )
 }
 
-export default Property
+export default PlayList
