@@ -6,6 +6,8 @@ export const config={
     platform:'com.olmez.tubrary',
     endpoint:process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT,
     projectId:process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID,
+    databaseId:process.env.EXPO_PUBLIC_APPWRITE_DATABASE_ID,
+    collectionId:process.env.EXPO_PUBLIC_APPWRITE_PLAYLIST_COLLECTION_ID
 }
 
 const client = new Client()

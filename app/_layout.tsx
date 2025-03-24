@@ -34,7 +34,7 @@ export default function RootLayout() {
 
     <QueryClientProvider client={queryClient}>
       <GlobalProvider>
-        <Stack screenOptions={{headerShown: false}} />
+        <Stack screenOptions={{headerShown: false}}  />
       </GlobalProvider>
     </QueryClientProvider>
   )
