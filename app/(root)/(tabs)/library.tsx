@@ -1,10 +1,14 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import ListChannelTab from '@/components/ListChannelTab'
 
 const library = () => {
   return (
     <View>
-      <Text>library</Text>
+      <Text>Followed Playlists</Text>
+
+      <ListChannelTab option1={'channel'}/>
+      
     </View>
   )
 }
