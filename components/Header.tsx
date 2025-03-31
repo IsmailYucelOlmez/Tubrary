@@ -5,12 +5,12 @@ import { Bell } from "lucide-react-native";
 
 const Header = () => {
   return (
-    <View className="flex flex-row justify-between items-center">
+    <View className="w-full px-4 flex flex-row justify-between items-center">
 
-        <View>
+        <View className='flex flex-row items-center'>
           <LogoSVG width={50} height={50} />
 
-          <Text className="text-2xl font-bold ">Tubrary</Text>
+          <Text className="text-2xl font-exoBold">Tubrary</Text>
         </View>
 
         <Bell size={24} color={'#000'}/>

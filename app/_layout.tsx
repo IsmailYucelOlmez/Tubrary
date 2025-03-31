@@ -11,7 +11,7 @@ const queryClient= new QueryClient();
 export default function RootLayout() {
 
   const [fontsLoaded] = useFonts({
-    "Exo": require("../assets/fonts/Exo/Exo-VariableFont_wght.ttf"),
+    "Exo": require("../assets/fonts/Exo/static/Exo-Regular.ttf"),
     "ExoItalic": require("../assets/fonts/Exo/Exo-Italic-VariableFont_wght.ttf"),
     "ExoBold": require("../assets/fonts/Exo/static/Exo-Bold.ttf"),
     "Philosopher": require("../assets/fonts/Philosopher/Philosopher-Regular.ttf"),

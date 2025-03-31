@@ -20,12 +20,12 @@ const SearchBar = () => {
   };
 
   return (
-    <View className="flex-1 flex flex-row items-center justify-between z-50">
+    <View className="w-full flex flex-row items-center justify-between rounded-lg bg-accent-100 z-50 border border-primary-100 px-2 py-0.5">
         <TextInput
           value={search}
           onChangeText={handleSearch}
-          placeholder="Search for anything"
-          className="text-sm font-rubik text-black-300 ml-2 flex-1"
+          placeholder="Search playlist or channel"
+          className="text-sm font-exo flex-1"
         />
 
         <TouchableOpacity>

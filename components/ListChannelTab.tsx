@@ -15,8 +15,8 @@ const ListChannelTab = ({option1,option2="playlist"}:tabTitleProps) => {
   }
 
   return (
-    <View className='flex flex-row justify-center items-center gap-2 border-b border-black'>
-      <Text className=' text-sm'>{option1}</Text>
+    <View className='flex flex-row justify-center items-center gap-2'>
+      <Text className=' text-sm font-exoBold '>{option1}</Text>
       <Switch
         trackColor={{false: '#767577', true: '#81b0ff'}}
         thumbColor={tab=='playlist' ? '#81b0ff' : '#f4f3f4'}

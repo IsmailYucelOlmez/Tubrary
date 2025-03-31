@@ -35,7 +35,7 @@ const profile = (navigation: NativeStackNavigationProp<any>) => {
   }
 
   return (
-    <View className='flex flex-col justify-center gap-12 mt-6 mx-4'>
+    <View className='flex flex-col justify-center gap-12 mt-6 mx-4 bg-[#F1FAEE]'>
 
       <View className='flex flex-row gap-6'>
         
